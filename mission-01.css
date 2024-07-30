@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(214, 231, 254);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+}
+
+/* +++++++++Header+++++++++++++ */
+header {
+    padding: 30px;
+    text-align: start;
+    left: 300px;
+    /* background-color: rgb(137, 253, 253);    */
+    color: rgb(251, 252, 252);
+}
+header > h1 {
+    font-size: 50px;
+    color: rgb(255, 0, 187);
+    font-weight: 900;
+}
+header > h3 {
+    font-size: 30px;
+}
+#logo {
+    position: absolute;  
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+}
+
+/* +++++++++++nav bar+++++++++++++ */
+nav {
+    display: flex;
+    background-color: rgb(127, 138, 255);
+
+}
+nav a {
+    color: bisque;
+    text-decoration: none;
+    padding: 10px 15px;
+    text-align: center;
+}
+nav a:hover {
+    background-color: aliceblue;
+    color: black;
+    cursor: pointer;
+}
+
+/* ++++++++++++++main+++++++++++++++ */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+/* ++++++++++++left++++++++++++++ */
+#left {
+    flex-basis: 40%;
+    background-color: rgb(214, 231, 254);
+    padding: 15px 10px;
+}
+#standings { 
+    width: 100%;
+    height: 550px;
+    padding: 20px;
+    
+}
+/* ++++++++++Right+++++++++++++ */
+#right {
+    flex-basis: 60%;
+    background-color: rgb(214, 231, 254);
+    padding: 15px;
+}
+.all-blacks {
+   width: 100%;
+   height: 200px;
+   padding: 10px;
+   display: flex;
+}
+.south-africa {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    display: flex;
+
+}
+/* ++++++++++Form++++++++++++++++++++ */
+fieldset {
+    background-color: rgb(214, 231, 254);
+}
+
+input[type="submit"] {
+    background-color: rgb(39, 129, 0);
+    color: aliceblue;
+    width: 30%;
+}
+/* ++++++++++++++footer++++++++++++++++++ */
+footer {
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background-color: rgb(137, 253, 253);
+    color: black;
+    font-size: 17px;
+}
+span {
+    color: blueviolet;
+    font-size: larger;
+}
+/* ++++++++++++++++animation+++++++++++++ */
+
+#animation {
+    width: 60px;
+    height: 60px;
+    background-color: darkgreen;
+    color: rgb(246, 251, 247);
+    position: relative;
+    animation-name: colour-changer;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+#animation:hover {
+    width: 400px;
+    height: 400px;
+}
+@keyframes colour-changer {
+    0% {
+        background-color: gold;
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        background-color: darkgreen;
+        color: aliceblue;
+        top: 200px;
+        left: 0px;
+
+    }
+
+    50% {
+        background-color: black;
+        top: 200px;
+        left: 200px;
+    }
+
+    75%{
+        background-color: darkgreen;
+        top: 0px;
+        left: 200px;
+
+    }
+
+    100% {
+        background-color: gold;
+        top: 0px;
+        left: 0px;
+
+    }
+}
+/* ++++++++++++++Media Queries+++++++++++++++++ */
+@media screen and (max-width:768px) {
+    nav, main {
+        flex-direction: column;
+    }
+}
